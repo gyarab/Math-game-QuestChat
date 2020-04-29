@@ -235,11 +235,11 @@ public class ChatServer {
 
         TaskInfo ti = new TaskInfo();
         if (td.getRounds() <= td.getCurRound()) {
-            // раунды закончились
+            // after last round
             ti.setTask("All done!");
             ti.setTimeout(0);
         } else {
-            // новый раунд
+            // new round
             td.setCurRound(td.getCurRound() + 1);
             ti.setTask(sol.getEquation());
             ti.setTimeout(td.getTimeSec());
@@ -345,7 +345,7 @@ public class ChatServer {
 
             // TODO: use solution here
         } else if (msg.getType() == 'M') {
-            // сообщение для чат-комнаты
+            // message for chat-room
             ChatMessageRq cm = converter.chatMessageRq(body);
             String topic = ud.getTopic();
             ChatMessageRs rs = new ChatMessageRs(ud.getName(), cm.getMessage());
