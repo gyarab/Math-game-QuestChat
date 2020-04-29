@@ -22,6 +22,6 @@ abstract public class Task {
     
     // method for generating a natural number in interval [1..val]
     protected int nextInt(int val){
-        return rnd.nextInt(10)+1;
+        return rnd.nextInt(val)+1;
     }
 }
