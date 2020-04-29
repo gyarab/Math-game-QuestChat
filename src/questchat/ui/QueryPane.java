@@ -46,6 +46,7 @@ class EquationPane extends JComponent {
         Font font = getFont();
         int size = font.getSize();
 
+        // set font for displaying powers
         Font upFn = font.deriveFont((float)(font.getSize()-4));
 
 
